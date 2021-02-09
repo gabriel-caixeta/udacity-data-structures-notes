@@ -1,6 +1,21 @@
 # udacity-data-structures-notes
 
 ## 1. Introduction
+### How to Solve Problems
+#### Problem
+- Is defined by the relation between the input and output
+- Rules:
+    - Find the inputs
+    - Find the outputs
+    - Solve the problem
+- Think of ways to structure a code, so you're able to do meaninful tests as you go
+
+### Efficiency
+- Also known as complexity
+- An arrangement between space and time: there's a need to sacrifice one for the other
+- Big O notation can be used for both time and space (more used in time)
+- [Big O Algorithm Complexity Cheat Sheet](https://www.bigocheatsheet.com/)
+- ***Need to work a bit more with Big O way of thinking***
 
 ## 2. Data Structures
 ### Collection
