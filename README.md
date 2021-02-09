@@ -19,13 +19,14 @@
 
 ### Strings
 - Arrays of bytes representing uUnicode characters
-- in the examples, word_flipper: `word = word[::-1]`
+- in the examples, word_flipper: `word = word[::-1]`　＊＊ FIND OUT WHAT IT DOES ＊＊
 
 ### Linked Lists
 - Easier than arrays to add and remove elements (takes constant time)
 - Stores the next element of the linked list
 - Doubly Linked List (contains both previous and next elements' reference)
 - Nodes don't have to be next to each other in memory
+** Only used in OOP ?? **
 
 #### Types of Linked Lists
 1. Singly Linked Lists
