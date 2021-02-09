@@ -25,3 +25,16 @@
 - Easier than arrays to add and remove elements (takes constant time)
 - Stores the next element of the linked list
 - Doubly Linked List (contains both previous and next elements' reference)
+- Nodes don't have to be next to each other in memory
+
+#### Types of Linked Lists
+1. Singly Linked Lists
+    -  Contains a reference to the next element
+
+2. Doubly Linked Lists
+    - Contains a reference to both the next and previous element
+
+3. Circular Linked Lists
+    - Contains a reference to another node within itself (not necessarily the head one)
+    - ie. NodeA -> NodeB -> NodeC -> NodeD -> NodeB
+
