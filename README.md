@@ -43,7 +43,8 @@
 - Doubly Linked List (contains both previous and next elements' reference)
 - Nodes don't have to be next to each other in memory
 
-- Question: ***Only used in OOP ??***
+- Question: Only used in OOP ?
+- Answer: No. Will alocate a few bytes for next element location, and other bytes for the actual value.
 
 #### Types of Linked Lists
 1. Singly Linked Lists
