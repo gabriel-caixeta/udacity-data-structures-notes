@@ -20,7 +20,7 @@
 ### Strings
 - Arrays of bytes representing uUnicode characters
 
--Question: in the examples, word_flipper: `word = word[::-1]`　***FIND OUT WHAT IT DOES***
+- Question: in the examples, word_flipper: `word = word[::-1]`　***FIND OUT WHAT IT DOES***
 
 ### Linked Lists
 - Easier than arrays to add and remove elements (takes constant time)
