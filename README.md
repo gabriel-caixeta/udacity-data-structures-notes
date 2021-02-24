@@ -86,3 +86,31 @@
     - Assign each element with a numerical priority
     - When Dequeue, remove the element with the highest priority
     - When with the same priority, oldest element gets dequeued first
+
+### 8. Recursion
+- What it needs:
+    - Base case: an exit condition, used to avoid infinite recursion
+    - Call itself with a different input parameter, also to avoid infinite recursion
+- Things to watch out for:
+    - Call Stack: python has a limit on the depth of recursion to prevent a stack overflow
+    - Slicing: (`a[start:end]`) is of O(k), where k is numbers of items to be sliced, so if it is included in the recursion, might increase the time complexity
+- Practice:
+    - Factorial
+    - Reverse a string
+    - Palindrome check ("abba", "madam")
+    - Add one to list representing a number (ie. [1,2,3])
+    - List permutation - uses insert to add to list -> needs deep copy
+    - String permutation - can't insert on string, no need for deep copy
+    - Keypad combinations
+    - Deep reverse: reverse nested lists (ie. `[1,2,3,[4,5,6]]` becomes `[[6,5,4],3,2,1]`)
+    - Tower of Hanoi - ***MIND BLOWING***
+
+### 8.1 Call Stack
+- Is a stack (LIFO) of frames
+- Frames
+    - when we call a function a frame is created in memory
+    - all the variables local to the function are created in this memory frame
+    - as soon as it is created it is pushed onto the call stack
+- The frame on top of the stack is executed first, as soon as the function finishes executing, the frame is discarted from the **call stack**
+- Tool for visualization: (Python tutor)[http://pythontutor.com/]
+-  
