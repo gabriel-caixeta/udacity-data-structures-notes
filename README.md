@@ -104,6 +104,11 @@
     - Keypad combinations
     - Deep reverse: reverse nested lists (ie. `[1,2,3,[4,5,6]]` becomes `[[6,5,4],3,2,1]`)
     - Tower of Hanoi - ***MIND BLOWING***
+    - Return codes - possible char for ASCII code (ie. 123 = [abc, aw, lc])
+    - Return subsets of list
+    - Staircase - how many ways to climb n steps if you can climb 1, 2 or 3 steps at a time
+    - Last occurence of a element in an array
+
 
 ### 8.1 Call Stack
 - Is a stack (LIFO) of frames
