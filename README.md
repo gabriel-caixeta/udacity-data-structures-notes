@@ -1,8 +1,8 @@
 # udacity-data-structures-notes
 
-## 1. Introduction
-### How to Solve Problems
-#### Problem
+# 1. Introduction
+## How to Solve Problems
+### Problem
 - Is defined by the relation between the input and output
 - Rules:
     - Find the inputs
@@ -10,34 +10,34 @@
     - Solve the problem
 - Think of ways to structure a code, so you're able to do meaninful tests as you go
 
-### Efficiency
+## Efficiency
 - Also known as complexity
 - An arrangement between space and time: there's a need to sacrifice one for the other
 - Big O notation can be used for both time and space (more used in time)
 - [Big O Algorithm Complexity Cheat Sheet](https://www.bigocheatsheet.com/)
 - ***Need to work a bit more with Big O way of thinking***
 
-## 2. Data Structures
-### 1. Collection
+# 2. Data Structures
+## 1. Collection
 - No particular order (can't get a specifc element,ie. the third element)
 - Don't have to have objects of the same type
 
-### 2. Lists (not in Python)
+## 2. Lists (not in Python)
 - Have an order (can get a specifc element)
 - Have no fixed lenght (can add or remove elements)
 
-### 3. Arrays and Python Lists
+## 3. Arrays and Python Lists
 - Is a list with a few added rules
 - Has an index (lists do not)
 - Python lists are basically arrays with added high-level functionality
 - The elements are next to each other in memory, therefore, with the index, you can easily access a specific element
 
-### 4. Strings
+## 4. Strings
 - Arrays of bytes representing uUnicode characters
 
 - Question: in the examples, word_flipper: `word = word[::-1]`　***FIND OUT WHAT IT DOES***
 
-### 5. Linked Lists
+## 5. Linked Lists
 - Easier than arrays to add and remove elements (takes constant time)
 - Stores the next element of the linked list
 - Doubly Linked List (contains both previous and next elements' reference)
@@ -46,28 +46,28 @@
 - **Question**: Only used in OOP ?
     - Answer: No. Will alocate a few bytes for next element location, and other bytes for the actual value.
 
-#### 5.1 Types of Linked Lists
-1. Singly Linked Lists
+### 5.1 Types of Linked Lists
+- Singly Linked Lists
     -  Contains a reference to the next element
 
-2. Doubly Linked Lists
+- Doubly Linked Lists
     - Contains a reference to both the next and previous element
 
-3. Circular Linked Lists
+- Circular Linked Lists
     - Contains a reference to another node within itself (not necessarily the head one)
     - ie. NodeA -> NodeB -> NodeC -> NodeD -> NodeB
 
-### 6. Stacks
+## 6. Stacks
 - Useful when the most recent elements / order of which the elements were saved is more important
 - Can be implemented with different Data Types (Array, Linked List, etc)
 - Can only access things from one end
 
-#### 6.1 Terminology
+### 6.1 Terminology
 - push: add an element to the stack (not insert)
 - pop: take an element off of the stack (not remove)
 - LIFO (Last In, First Out): the last element you push in, is the first one you get when you use pop
 
-### 7. Queues
+## 7. Queues
 - Opposite of a stack -> FIFO (First In, First Out)
 - Can be implemented with a LinkedList
 
@@ -87,7 +87,7 @@
     - When Dequeue, remove the element with the highest priority
     - When with the same priority, oldest element gets dequeued first
 
-### 8. Recursion
+## 8. Recursion
 - What it needs:
     - Base case: an exit condition, used to avoid infinite recursion
     - Call itself with a different input parameter, also to avoid infinite recursion
@@ -118,7 +118,7 @@
 - The frame on top of the stack is executed first, as soon as the function finishes executing, the frame is discarted from the **call stack**
 - Tool for visualization: [Python tutor](http://pythontutor.com/)
 
-### 9. Trees
+## 9. Trees
 - Extension of a Linked List
 - Characteristics:
     - Must be completely connected: starting from the root, there must be some way to reach every element of the tree
@@ -152,7 +152,7 @@
     - Level order
     - Usually visit nodes on the same level from left to right
 
-### 9.2.1 Tree Traversal Recursion (DFS)
+#### 9.2.1 Tree Traversal Recursion (DFS)
 - Base code:
     - 1: visited.append(node.value)
     - 2: traverse(node.left)
@@ -169,7 +169,7 @@
 - Search and delete(search the element before deleting) -> O(n)
 - Insert: worst case is the height if the tree -> 0(logn)
 
-### 9.3.1 Binary Search Tree (BST)
+#### 9.3.1 Binary Search Tree (BST)
 - All elements to the left of an element have lower value, to the right have higher value
 - Search: order is the height of the tree ->  O(logn)
 - Unbalanced BST: the distribution of nodes is skewed to one side
