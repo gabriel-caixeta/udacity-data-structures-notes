@@ -116,7 +116,7 @@
     - all the variables local to the function are created in this memory frame
     - as soon as it is created it is pushed onto the call stack
 - The frame on top of the stack is executed first, as soon as the function finishes executing, the frame is discarted from the **call stack**
-- Tool for visualization: (Python tutor)[http://pythontutor.com/]
+- Tool for visualization: [Python tutor](http://pythontutor.com/)
 
 ### 9. Trees
 - Extension of a Linked List
