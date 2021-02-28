@@ -109,7 +109,6 @@
     - Staircase - how many ways to climb n steps if you can climb 1, 2 or 3 steps at a time
     - Last occurence of a element in an array
 
-
 ### 8.1 Call Stack
 - Is a stack (LIFO) of frames
 - Frames
@@ -118,4 +117,60 @@
     - as soon as it is created it is pushed onto the call stack
 - The frame on top of the stack is executed first, as soon as the function finishes executing, the frame is discarted from the **call stack**
 - Tool for visualization: (Python tutor)[http://pythontutor.com/]
--  
+
+### 9. Trees
+- Extension of a Linked List
+- Characteristics:
+    - Must be completely connected: starting from the root, there must be some way to reach every element of the tree
+    - There must not be any cycles
+
+### 9.1 Terminology
+- Root: first element (level 1)
+- Nodes: elements of the tree
+- Level: indicates the distance from the root (root is level 1, first nodes are level 2, etc)
+- Parent/Child: node at a lower level is a parent, connected to a node at a higher level, that is a child
+    - Nodes in the middle can be both Parent and Child. Depends on what it is being compared it to
+    - Children can only have one parent
+- Ancestry: node at a lower level (Ancestor), connected to a node at a higher level (Descendant)
+- Leaves/External nodes: nodes at the end, that have no child nodes
+- Height: is the distance between a node and the furthest connected leaf
+    - Leaves have height 0
+    - Height of a tree is the height of the root node
+- Depth: opposite to the height
+
+### 9.2 Tree Traversal
+- Depth-First Search (DFS)
+    - If there are children node to explore, they are a priority
+    - Pre-order:
+        - Check a node before moving on to the child nodes
+    - In-order:
+        - Left to right. Check all nodes to the left and traverse back (??)
+    - Post-order:
+        - Check off a node only after visiting all its children
+
+### 9.2.1 Tree Traversal Recursion
+- Base code:
+    - 1: visited.append(node.value)
+    - 2: traverse(node.left)
+    - 3: traverse(node.right)
+- Pre-order: 1-2-3
+- In-order: 2-1-3
+- Post-order: 2-3-1
+    
+- Breadth-First Search (BFS)
+    - The priority is visiting every node on the same level we're currently on, before visiting child nodes
+    - Level order
+    - Usually visit nodes on the same level from left to right
+
+### 9.3 Binary Tree
+- Parents have **at most two children**
+- Search and delete(search the element before deleting) -> O(n)
+- Insert: worst case is the height if the tree -> 0(logn)
+
+### 9.3.1 Binary Search Tree (BST)
+- All elements to the left of an element have lower value, to the right have higher value
+- Search: order is the height of the tree ->  O(logn)
+- Unbalanced BST: the distribution of nodes is skewed to one side
+    - can start at the root, or any other node
+    - is the worst case scenarion for a BST
+    - search, insert, delete all take linear time -> O(n)
