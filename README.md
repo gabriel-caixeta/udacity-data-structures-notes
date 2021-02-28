@@ -147,8 +147,12 @@
         - Left to right. Check all nodes to the left and traverse back (??)
     - Post-order:
         - Check off a node only after visiting all its children
+- Breadth-First Search (BFS)
+    - The priority is visiting every node on the same level we're currently on, before visiting child nodes
+    - Level order
+    - Usually visit nodes on the same level from left to right
 
-### 9.2.1 Tree Traversal Recursion
+### 9.2.1 Tree Traversal Recursion (DFS)
 - Base code:
     - 1: visited.append(node.value)
     - 2: traverse(node.left)
@@ -157,10 +161,8 @@
 - In-order: 2-1-3
 - Post-order: 2-3-1
     
-- Breadth-First Search (BFS)
-    - The priority is visiting every node on the same level we're currently on, before visiting child nodes
-    - Level order
-    - Usually visit nodes on the same level from left to right
+
+
 
 ### 9.3 Binary Tree
 - Parents have **at most two children**
