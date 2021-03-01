@@ -152,16 +152,20 @@
     - Level order
     - Usually visit nodes on the same level from left to right
 
-#### 9.2.1 Tree Traversal Recursion (DFS)
-- Base code:
-    - 1: visited.append(node.value)
-    - 2: traverse(node.left)
-    - 3: traverse(node.right)
-- Pre-order: 1-2-3
-- In-order: 2-1-3
-- Post-order: 2-3-1
-    
+#### 9.2.1 Tree Traversal - DFS
+- Stack
+- Recursiom
+    - Base code:
+        - 1: visited.append(node.value)
+        - 2: traverse(node.left)
+        - 3: traverse(node.right)
+    - Pre-order: 1-2-3
+    - In-order: 2-1-3
+    - Post-order: 2-3-1
 
+#### 9.2.2 Tree Traversal - BFS
+- Queue
+    - Can be used to print the tree in a visually pleasing way (each level in a line)
 
 
 ### 9.3 Binary Tree
@@ -176,3 +180,19 @@
     - can start at the root, or any other node
     - is the worst case scenarion for a BST
     - search, insert, delete all take linear time -> O(n)
+
+## 10. Set
+- A kind of collection, similar to a list, but that doesn't allow element repetition
+- There is no particular order
+
+## 11. Hash Maps
+### 11.1 Maps
+- Defining characteristic is the key-value structure
+- Is a set based data structure
+    - the keys in a map are a set
+
+### 11.2 Hash Functions
+- A hash function is any function that can be used to map data of arbitrary size to fixed-size values. The values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are usually used to index a fixed-size table called a hash table. Use of a hash function to index a hash table is called hashing or scatter storage addressing. - [Source](https://en.wikipedia.org/wiki/Hash_function)
+- Collisions: happens when the hash function returns the same value for two different inputs
+    - Store in a bucket. instead of storing a value, you store a collection of the values with the same hash code in the same bucket
+- It often requires a compromise between a wide spread array (uses more space), or a shorter array with larger buckets (can end up in a linear time complexity in the worst case scenario)
