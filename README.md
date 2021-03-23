@@ -196,3 +196,54 @@
 - Collisions: happens when the hash function returns the same value for two different inputs
     - Store in a bucket. instead of storing a value, you store a collection of the values with the same hash code in the same bucket
 - It often requires a compromise between a wide spread array (uses more space), or a shorter array with larger buckets (can end up in a linear time complexity in the worst case scenario)
+
+# 3. Algorithms
+- is a high-level description of a trick for solving a problem
+
+## 3.1 Binary Search
+- Logic:
+    - Get middle element of a sorted collection
+    - Compare desired element with the middle
+    - if desired is bigger, repeat with the higher half
+    - else, repeat with the lower half
+- Time complexity: `O(logn)`
+    - Results Table:
+    | Array Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+    | Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 |
+
+## 3.2 Trie
+- Is a Tree data structure
+- Good for dealing with sequence data (characters, words, network of nodes)
+- Example:
+    ```
+    'a': {
+        'd': {
+            'd': {'word_end': True},
+            'word_end': False
+        },
+        'word_end': True
+    },
+    'h': {
+        'i': {'word_end': True},
+        'word_end': False
+    }
+    ```
+
+## 3.3 Heap
+- Is a Tree data structure
+    - Is a complete Binary Tree
+- Elements are arranged in an increasing or decreasing order, in such that the root element is either the maximum or the minimum element of the tree
+- MaxHeap
+    - Parent has a grater value than the children
+- MinHeap
+    - Parent has a lower value than the children
+
+### 3.1 Heapify
+- Operation to reorder the tree based on the Heap properties
+- Used when inserting or deleting elements in a Heap
+- Insertion:
+    - Add the element to the next open spot in the tree (last layer)
+    - Check the parent, and swap when the child is bigger(MaxHeap)
+- Deletion
+    - Get the right most element and add to the deleted element place
+    - Swap with the children on the left side if the children is bigger(MaxHeap)
