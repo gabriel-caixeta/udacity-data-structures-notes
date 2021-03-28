@@ -33,9 +33,9 @@
     - [11.1 Maps](#111-maps)
     - [11.2 Hash Functions](#112-hash-functions)
 - [3. Algorithms](#3-algorithms)
-  - [3.1 Binary Search](#31-binary-search)
-  - [3.2 Trie](#32-trie)
-  - [3.3 Heap](#33-heap)
+  - [1 Binary Search](#1-binary-search)
+  - [2 Trie](#2-trie)
+  - [3 Heap](#3-heap)
     - [3.1 Heapify](#31-heapify)
 
 # 1. Introduction
@@ -238,7 +238,7 @@
 # 3. Algorithms
 - is a high-level description of a trick for solving a problem
 
-## 3.1 Binary Search
+## 1 Binary Search
 - Logic:
     - Get middle element of a sorted collection
     - Compare desired element with the middle
@@ -251,7 +251,7 @@
         | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
         | Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 |
 
-## 3.2 Trie
+## 2 Trie
 - Is a Tree data structure
 - Good for dealing with sequence data (characters, words, network of nodes)
 - Example:
@@ -269,7 +269,7 @@
     }
     ```
 
-## 3.3 Heap
+## 3 Heap
 - Is a Tree data structure
     - Is a complete Binary Tree
 - Elements are arranged in an increasing or decreasing order, in such that the root element is either the maximum or the minimum element of the tree
