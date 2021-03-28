@@ -1,4 +1,42 @@
-# udacity-data-structures-notes
+# Udacity - Data Structure and Algorithms - Personal Notes
+
+# Table of Contents
+- [Udacity - Data Structure and Algorithms - Personal Notes](#udacity---data-structure-and-algorithms---personal-notes)
+- [Table of Contents](#table-of-contents)
+- [1. Introduction](#1-introduction)
+  - [How to Solve Problems](#how-to-solve-problems)
+    - [Problem](#problem)
+  - [Efficiency](#efficiency)
+- [2. Data Structures](#2-data-structures)
+  - [1. Collection](#1-collection)
+  - [2. Lists (not in Python)](#2-lists-not-in-python)
+  - [3. Arrays and Python Lists](#3-arrays-and-python-lists)
+  - [4. Strings](#4-strings)
+  - [5. Linked Lists](#5-linked-lists)
+    - [5.1 Types of Linked Lists](#51-types-of-linked-lists)
+  - [6. Stacks](#6-stacks)
+    - [6.1 Terminology](#61-terminology)
+  - [7. Queues](#7-queues)
+    - [7.1 Terminology](#71-terminology)
+    - [7.2 Types of Queues](#72-types-of-queues)
+  - [8. Recursion](#8-recursion)
+    - [8.1 Call Stack](#81-call-stack)
+  - [9. Trees](#9-trees)
+    - [9.1 Terminology](#91-terminology)
+    - [9.2 Tree Traversal](#92-tree-traversal)
+      - [9.2.1 Tree Traversal - DFS](#921-tree-traversal---dfs)
+      - [9.2.2 Tree Traversal - BFS](#922-tree-traversal---bfs)
+    - [9.3 Binary Tree](#93-binary-tree)
+      - [9.3.1 Binary Search Tree (BST)](#931-binary-search-tree-bst)
+  - [10. Set](#10-set)
+  - [11. Hash Maps](#11-hash-maps)
+    - [11.1 Maps](#111-maps)
+    - [11.2 Hash Functions](#112-hash-functions)
+- [3. Algorithms](#3-algorithms)
+  - [3.1 Binary Search](#31-binary-search)
+  - [3.2 Trie](#32-trie)
+  - [3.3 Heap](#33-heap)
+    - [3.1 Heapify](#31-heapify)
 
 # 1. Introduction
 ## How to Solve Problems
@@ -208,8 +246,9 @@
     - else, repeat with the lower half
 - Time complexity: `O(logn)`
     - Results Table:
-    || Array Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 ||
-    || Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 ||
+    | Array Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+    | ---------- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+    | Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 |
 
 ## 3.2 Trie
 - Is a Tree data structure
