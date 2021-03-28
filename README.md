@@ -246,9 +246,10 @@
     - else, repeat with the lower half
 - Time complexity: `O(logn)`
     - Results Table:
-    | Array Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-    | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 |
+
+        | Array Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+        | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+        | Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 |
 
 ## 3.2 Trie
 - Is a Tree data structure
