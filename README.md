@@ -37,6 +37,8 @@
   - [2 Trie](#2-trie)
   - [3 Heap](#3-heap)
     - [3.1 Heapify](#31-heapify)
+  - [4 Self Balancing Tree (Red - Black Tree)](#4-self-balancing-tree-red---black-tree)
+    - [4.1 Insertion](#41-insertion)
 
 # 1. Introduction
 ## How to Solve Problems
@@ -287,3 +289,14 @@
 - Deletion
     - Get the right most element and add to the deleted element place
     - Swap with the children on the left side if the children is bigger(MaxHeap)
+
+## 4 Self Balancing Tree (Red - Black Tree)
+- Minimizes the number of level that it uses
+- Rules:
+  - Color property: Nodes are assigned an aditional color property (red or black)
+  - Null leaf nodes: every node that has no children, must have null children
+  - If a node is red, both the children must be black
+  - Root node must be black (optional)
+  - **Every path from a node to its descendants null nodes must contain the same number of black nodes**
+### 4.1 Insertion
+- 
