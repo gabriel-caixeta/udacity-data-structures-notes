@@ -299,4 +299,19 @@
   - Root node must be black (optional)
   - **Every path from a node to its descendants null nodes must contain the same number of black nodes**
 ### 4.1 Insertion
-- 
+- Time complexity: O(logn) for both average and worst cases
+- Rule: Insert a node as a red node
+- Cases:
+  - Case 1 - Root node
+    - insert the node to black if that is a rule
+  - Case 2 - new parent node is black
+    - no work needed
+  - Case 3 - new parent node and its sibling are red
+    - both changed to black
+    - grandparent changed to red
+  - new parent node is red and its sibling is black
+    - Case 4 - node and parent are opposite (node is left child, parent is right child)
+      - left rotation
+    - Case 5 - node and parent are same side (node and parent are left child of their respective parents)
+      - right rotation including grandparent
+      - swap parent and grandparent's colors
