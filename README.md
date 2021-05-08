@@ -39,6 +39,21 @@
     - [3.1 Heapify](#31-heapify)
   - [4 Self Balancing Tree (Red - Black Tree)](#4-self-balancing-tree-red---black-tree)
     - [4.1 Insertion](#41-insertion)
+  - [5 Sorting](#5-sorting)
+    - [5.1 Bubble Sort](#51-bubble-sort)
+      - [Time complexity](#time-complexity)
+      - [Space complexity](#space-complexity)
+      - [Algorithm](#algorithm)
+    - [5.2 Merge Sort](#52-merge-sort)
+      - [Time complexity](#time-complexity-1)
+      - [Space complexity](#space-complexity-1)
+      - [Algorithm](#algorithm-1)
+    - [5.3 Quick Sort](#53-quick-sort)
+      - [Time complexity](#time-complexity-2)
+      - [Space complexity](#space-complexity-2)
+      - [Algorithm](#algorithm-2)
+    - [5.4 HeapSort](#54-heapsort)
+      - [Algorithm](#algorithm-3)
 
 # 1. Introduction
 ## How to Solve Problems
@@ -315,3 +330,79 @@
     - Case 5 - node and parent are same side (node and parent are left child of their respective parents)
       - right rotation including grandparent
       - swap parent and grandparent's colors
+
+## 5 Sorting
+- Naive approach: check every element agains every other element in the array
+- Consider if the sorting algorithm is **inplace** or not
+  - inplace: swap elements within the array and does not need to create a new sorted array
+
+### 5.1 Bubble Sort
+- is naive approach
+- an inplace algorithm
+#### Time complexity
+- Worst case, Average case = `O(n^2)`
+- Best case = `O(n)`
+  - when the array was already sorted, or if there's only one element the needs to be bubbled up to a new place
+#### Space complexity
+- `O(1)`
+#### Algorithm
+- Double loops
+
+### 5.2 Merge Sort
+- Devide and Conquer
+#### Time complexity
+- O([# of comparisons] * [# steps])
+  - Comparisons can be approximated to `n`
+  - Steps are as follows:
+  - 
+        | Array Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+        | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+        | Itterations | 0 | 1 | 2 | 2 | 3 | 3 | 3 | 3 | 4 |
+
+- Worst, average case = `O(nlogn)`
+#### Space complexity
+- There's need to create new arrays
+- Auxiliary Space = `O(n)`
+#### Algorithm
+- Devide the array into arrays of 1 or 2 elements
+- Merge the arrays 2 by 2
+- Repeat until merging all
+
+### 5.3 Quick Sort
+- Most efficient in most cases
+#### Time complexity
+- Worst case - `O(n^2)`
+  - same as bubble sort
+  - happens when the pivots are already in place
+- Average and best case = `O(nlogn)`
+#### Space complexity
+- `O(1)`
+#### Algorithm
+- pick a pivot
+  - usually the last element, but can be optimized by picking the median between the last few elements
+- compare with the first element with the pivot
+  - if the pivot is smaller, move the first element to the pivot location
+  - the pivot to the location before it
+  - and the element in that position to the first
+
+    | Iterations/Array positions | 0 | 1 | 2 | 3 | 4 | 5 | 6 | Comments |
+    | :--------: | --- | --- | --- | --- | --- | --- | --- | --- |
+    | 0 | 8 | 3 | 1 | 7 | 0 | 10 | ***2*** | Select a pivot,  Compare and shift with *8* |
+    | 1 | 10 | 3 | 1 | 7 | 0 | ***2*** | 8 | Compare and shift with *10* |
+    | 2 | 0 | 3 | 1 | 7 | ***2*** | 10 | 8 | Compare and shift with *3* |
+    | 3 | 0 | 7 | 1 | ***2*** | 3 | 10 | 8 | Compare and shift with *7* |
+    | 4 | 0 | 1 | ***2*** | 7 | 3 | 10 | 8 | Compare with *0* and *1*, already on the right spot |
+    | 5 | 0 | ***1*** | *2* | 7 | 3 | 10 | 8 | Select pivot, compare with *0*, already on the right spot |
+    | 6 | *0* | *1* | *2* | 7 | 3 | 10 | ***8*** | Select pivot, compare with *7*, *3* and *10* and shift |
+    | 7 | *0* | *1* | *2* | 7 | 3 | ***8*** | 10 | Already on the right spot |
+    | 7 | *0* | *1* | *2* | 7 | ***3*** | *8* | *10* | Select new pivot, compare and shift with *7* |
+    | 7 | *0* | *1* | *2* | *3* | *7* | *8* | *10* | Sorted |
+
+
+### 5.4 HeapSort
+- an in-place sorting algorithm
+
+#### Algorithm
+- convert the array into a maxheap
+- swap the top element with the last element in the array
+- repeat with `arr[*len(arr)-1]` (all but the sorted elements)
