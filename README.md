@@ -54,6 +54,14 @@
       - [Algorithm](#algorithm-2)
     - [5.4 HeapSort](#54-heapsort)
       - [Algorithm](#algorithm-3)
+- [Advanced Algorithms](#advanced-algorithms)
+  - [Greedy Algorithms](#greedy-algorithms)
+    - [Definition](#definition)
+    - [Examples](#examples)
+  - [Graph](#graph)
+    - [Search](#search)
+      - [DFS (Depth-First Search)](#dfs-depth-first-search)
+      - [BFS (Breadth-First Search)](#bfs-breadth-first-search)
 
 # 1. Introduction
 ## How to Solve Problems
@@ -406,3 +414,51 @@
 - convert the array into a maxheap
 - swap the top element with the last element in the array
 - repeat with `arr[*len(arr)-1]` (all but the sorted elements)
+
+# Advanced Algorithms
+
+## Greedy Algorithms
+### Definition
+- A Greedy Technique is the one which picks up the "best" possible solution to a sub-problem available at the moment. Greedy algorithms is the collective name given to algorithms which make use of the Greedy Technique. The step by step process of these algorithms may be different. However, if any algorithm follows the Greedy Technique at each step, it can be called as a Greedy Algorithm.
+### Examples
+- Dijkstra's Shortest Path Algorithm
+- A* search Algorithm
+- Prim's algorithm for Minimal Spanning Tree
+- Kruskal's algorithm for Minimal Spanning Tree
+- Knapsack Problem
+- Travelling Salesman Problem
+  
+## Graph
+- Data structure used to show how different things are connected to one another
+- Tree is a type of Graph
+- Disconnected graph
+  - has a vertex that can't be reached by the other vertices
+- Connectivity
+  - Minimum number of elements that needs to be removed for a graph to become disconnected
+- Representation
+  - Edge List
+    - List of the edges (ie. `[A,B]`)
+  - Adjacency List
+    - List of connected elements, the index of the adjacency list is the reference to the vertex it represents
+    - `[[1], [0,2,3], [1,3], [1,2]]`
+  - Adjacency Matrix
+    - Diagonal is always zero
+    - A single edge shows up twice in the matrix
+    - `[[0,1,0,0], [1,0,1,1], [0,1,0,1], [0,1,1,0]]`
+
+### Search
+#### DFS (Depth-First Search)
+- Mark a node as seen, add it to the seen elements stack
+- Pick an edge, follow it, mark it as seen and add it to the stack
+- Repeat while there are unseen edges and nodes
+- When hit a node that you've seen before, go back one node and try another edge
+- If you run out of edges with new nodes, pop the element from the stack and go back to the one before it
+- Run time is often written as `O(|E| + |V|)` number of edges + vertices
+
+#### BFS (Breadth-First Search)
+- Similar to DFS, but here, we search every edge of one node before continuing to the next node
+- Mark node as seen
+- Then visit a node adjacent to it, mark it as seen and add it to a queue
+- Go back to that first node and visit all the other adjacent, marking each as seen and adding to the queue
+- When run out of edges, dequeue a node from the queue and use it as the next starting place
+- Run time is often written as `O(|E| + |V|)` number of edges + vertices
